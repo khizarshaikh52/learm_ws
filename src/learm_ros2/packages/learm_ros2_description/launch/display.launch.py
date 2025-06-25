@@ -4,7 +4,7 @@ import xacro
 
 def generate_launch_description():
     # Path to your learm.urdf.xacro file
-    xacro_file = '/home/khizar/ros2_ws/ros2_ws/src/learm_ros2/packages/learm_ros2_description/urdf/learm.urdf.xacro'
+    xacro_file = '/home/skhizar/learm_ws/src/learm_ros2/packages/learm_ros2_description/urdf/learm.urdf.xacro'
 
     # Process the xacro file
     doc = xacro.process_file(xacro_file)

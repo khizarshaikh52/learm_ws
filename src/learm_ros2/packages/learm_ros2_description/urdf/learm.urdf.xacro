@@ -7,21 +7,21 @@
   <link name="base_link">
     <visual>
       <geometry>
-        <mesh filename="package://learm_ros2_description/meshes/base.stl"/>
+        <mesh filename="package://learm_ros2_description/meshes/base.stl" />
       </geometry>
     </visual>
   </link>
   <link name="shoulder_link">
     <visual>
       <geometry>
-        <mesh filename="package://learm_ros2_description/meshes/shoulder.stl"/>
+        <mesh filename="package://learm_ros2_description/meshes/shoulder.stl" />
       </geometry>
     </visual>
   </link>
   <link name="humerus_link">
     <visual>
       <geometry>
-        <mesh filename="package://learm_ros2_description/meshes/humerus.stl"/>
+        <mesh filename="package://learm_ros2_description/meshes/humerus.stl" />
       </geometry>
     </visual>
   </link>
@@ -29,9 +29,8 @@
     <visual>
       <origin rpy="0 0 3.14159"/>
       <geometry>
-        <mesh filename="package://learm_ros2_description/meshes/forearm1.stl" scale="0.1 0.1 0.1"/>
+        <mesh filename="package://learm_ros2_description/meshes/forearm1.stl" scale="0.1 0.1 0.1" />
       </geometry>
-    
     </visual>
   </link>
   <link name="forearm2_link">
@@ -46,49 +45,49 @@
     <visual>
       <origin rpy="0 0 3.14159"/>
       <geometry>
-        <mesh filename="package://learm_ros2_description/meshes/wrist.stl"/>
+        <mesh filename="package://learm_ros2_description/meshes/wrist.stl" />
       </geometry>
     </visual>
   </link>
   <link name="hand_link">
     <visual>
       <geometry>
-        <mesh filename="package://learm_ros2_description/meshes/hand.stl"/>
+        <mesh filename="package://learm_ros2_description/meshes/hand.stl" />
       </geometry>
     </visual>
   </link>
   <link name="grip_left_link">
     <visual>
       <geometry>
-        <mesh filename="package://learm_ros2_description/meshes/carpal-left.stl"/>
+        <mesh filename="package://learm_ros2_description/meshes/carpal-left.stl" />
       </geometry>
     </visual>
   </link>
   <link name="grip_right_link">
     <visual>
       <geometry>
-        <mesh filename="package://learm_ros2_description/meshes/carpal-right.stl"/>
+        <mesh filename="package://learm_ros2_description/meshes/carpal-right.stl" />
       </geometry>
     </visual>
   </link>
   <link name="tendon_left_link">
     <visual>
       <geometry>
-        <mesh filename="package://learm_ros2_description/meshes/tendon.stl"/>
+        <mesh filename="package://learm_ros2_description/meshes/tendon.stl" />
       </geometry>
     </visual>
   </link>
   <link name="tendon_right_link">
     <visual>
       <geometry>
-        <mesh filename="package://learm_ros2_description/meshes/tendon.stl"/>
+        <mesh filename="package://learm_ros2_description/meshes/tendon.stl" />
       </geometry>
     </visual>
   </link>
   <link name="finger_left_link">
     <visual>
       <geometry>
-        <mesh filename="package://learm_ros2_description/meshes/finger.stl"/>
+        <mesh filename="package://learm_ros2_description/meshes/finger.stl" />
       </geometry>
     </visual>
   </link>
@@ -96,7 +95,7 @@
     <visual>
       <origin rpy="0 0 3.14159"/>
       <geometry>
-        <mesh filename="package://learm_ros2_description/meshes/finger.stl"/>
+        <mesh filename="package://learm_ros2_description/meshes/finger.stl" />
       </geometry>
     </visual>
   </link>

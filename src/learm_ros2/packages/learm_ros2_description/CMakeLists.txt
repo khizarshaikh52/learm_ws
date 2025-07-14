@@ -20,6 +20,22 @@ install(DIRECTORY urdf/
   DESTINATION share/${PROJECT_NAME}/urdf
 )
 
+install(
+  DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
+install(
+  DIRECTORY worlds
+  DESTINATION share/${PROJECT_NAME}
+)
+
+install(
+  DIRECTORY
+    urdf
+    meshes
+  DESTINATION share/${PROJECT_NAME}
+)
 
 ament_export_dependencies(${THIS_PACKAGE_INCLUDE_DEPENDS})
 

@@ -1,0 +1,19 @@
+digraph G {
+"humerus_link" -> "forearm1_link"[label=" Broadcaster: default_authority\nAverage rate: 10.196\nBuffer length: 5.1\nMost recent transform: 1754316736.428373\nOldest transform: 1754316731.328351\n"];
+"shoulder_link" -> "humerus_link"[label=" Broadcaster: default_authority\nAverage rate: 10.196\nBuffer length: 5.1\nMost recent transform: 1754316736.428373\nOldest transform: 1754316731.328351\n"];
+"forearm1_link" -> "forearm2_link"[label=" Broadcaster: default_authority\nAverage rate: 10.196\nBuffer length: 5.1\nMost recent transform: 1754316736.428373\nOldest transform: 1754316731.328351\n"];
+"grip_left_link" -> "finger_left_link"[label=" Broadcaster: default_authority\nAverage rate: 10.196\nBuffer length: 5.1\nMost recent transform: 1754316736.428373\nOldest transform: 1754316731.328351\n"];
+"hand_link" -> "grip_left_link"[label=" Broadcaster: default_authority\nAverage rate: 10.196\nBuffer length: 5.1\nMost recent transform: 1754316736.428373\nOldest transform: 1754316731.328351\n"];
+"grip_right_link" -> "finger_right_link"[label=" Broadcaster: default_authority\nAverage rate: 10.196\nBuffer length: 5.1\nMost recent transform: 1754316736.428373\nOldest transform: 1754316731.328351\n"];
+"hand_link" -> "grip_right_link"[label=" Broadcaster: default_authority\nAverage rate: 10.196\nBuffer length: 5.1\nMost recent transform: 1754316736.428373\nOldest transform: 1754316731.328351\n"];
+"wrist_link" -> "hand_link"[label=" Broadcaster: default_authority\nAverage rate: 10.196\nBuffer length: 5.1\nMost recent transform: 1754316736.428373\nOldest transform: 1754316731.328351\n"];
+"base_link" -> "shoulder_link"[label=" Broadcaster: default_authority\nAverage rate: 10.196\nBuffer length: 5.1\nMost recent transform: 1754316736.428373\nOldest transform: 1754316731.328351\n"];
+"world" -> "base_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"hand_link" -> "tendon_left_link"[label=" Broadcaster: default_authority\nAverage rate: 10.196\nBuffer length: 5.1\nMost recent transform: 1754316736.428373\nOldest transform: 1754316731.328351\n"];
+"hand_link" -> "tendon_right_link"[label=" Broadcaster: default_authority\nAverage rate: 10.196\nBuffer length: 5.1\nMost recent transform: 1754316736.428373\nOldest transform: 1754316731.328351\n"];
+"forearm2_link" -> "wrist_link"[label=" Broadcaster: default_authority\nAverage rate: 10.196\nBuffer length: 5.1\nMost recent transform: 1754316736.428373\nOldest transform: 1754316731.328351\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1754316736.4815052"[ shape=plaintext ] ;
+}->"world";
+}

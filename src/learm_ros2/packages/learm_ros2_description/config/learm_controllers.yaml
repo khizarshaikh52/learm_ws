@@ -1,0 +1,77 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    shoulder_pan_controller:
+      type: position_controllers/JointEffortController
+    shoulder_lift_controller:
+      type: position_controllers/JointEffortController
+    elbow1_controller:
+      type: position_controllers/JointEffortController
+    elbow2_controller:
+      type: position_controllers/JointEffortController
+    wrist_flex_controller:
+      type: position_controllers/JointEffortController
+    wrist_roll_controller:
+      type: position_controllers/JointEffortController
+    grip_left_controller:
+      type: position_controllers/JointEffortController
+
+shoulder_pan_controller:
+  ros__parameters:
+    joint: shoulder_pan
+    pid:
+      p: 100.0
+      i:   0.01
+      d:   1.0
+
+shoulder_lift_controller:
+  ros__parameters:
+    joint: shoulder_lift
+    pid:
+      p: 100.0
+      i:   0.01
+      d:   1.0
+
+elbow1_controller:
+  ros__parameters:
+    joint: elbow1
+    pid:
+      p: 100.0
+      i:   0.01
+      d:   1.0
+
+elbow2_controller:
+  ros__parameters:
+    joint: elbow2
+    pid:
+      p: 100.0
+      i:   0.01
+      d:   1.0
+
+wrist_flex_controller:
+  ros__parameters:
+    joint: wrist_flex
+    pid:
+      p: 100.0
+      i:   0.01
+      d:   1.0
+
+wrist_roll_controller:
+  ros__parameters:
+    joint: wrist_roll
+    pid:
+      p: 100.0
+      i:   0.01
+      d:   1.0
+
+grip_left_controller:
+  ros__parameters:
+    joint: grip_left
+    pid:
+      p: 100.0
+      i:   0.01
+      d:   1.0

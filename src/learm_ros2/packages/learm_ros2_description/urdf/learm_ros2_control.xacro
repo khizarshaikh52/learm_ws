@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="learm">
+
+  <!-- Accept the same is_ignition arg as your main Xacro -->
+  <xacro:arg name="is_ignition" default="true"/>
+  <xacro:property name="PI" value="3.14159265359"/>
+
+  <ros2_control name="RobotSystem" type="system">
+    <!-- Hardware plugin selection -->
+    <xacro:if value="$(arg is_ignition)">
+      <hardware>
+        <plugin>ign_ros2_control/IgnitionSystem</plugin>
+      </hardware>
+    </xacro:if>
+    <xacro:unless value="$(arg is_ignition)">
+      <hardware>
+        <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+      </hardware>
+    </xacro:unless>
+
+    <!-- Define each joint with command & state interfaces -->
+    <joint name="shoulder_pan">
+      <command_interface name="position"/>
+      <state_interface   name="position"/>
+    </joint>
+
+    <joint name="shoulder_lift">
+      <command_interface name="position"/>
+      <state_interface   name="position"/>
+    </joint>
+
+    <joint name="elbow1">
+      <command_interface name="position"/>
+      <state_interface   name="position"/>
+    </joint>
+
+    <joint name="elbow2">
+      <command_interface name="position"/>
+      <state_interface   name="position"/>
+    </joint>
+
+    <joint name="wrist_flex">
+      <command_interface name="position"/>
+      <state_interface   name="position"/>
+    </joint>
+
+    <joint name="wrist_roll">
+      <command_interface name="position"/>
+      <state_interface   name="position"/>
+    </joint>
+
+    <!-- Grip_left is actuated normally (no mimic here) -->
+    <joint name="grip_left">
+      <command_interface name="position"/>
+      <state_interface   name="position"/>
+    </joint>
+
+    <!-- If you also want to control the finger/tendon joints directly,
+         add more <joint> entries here for grip_right, tendon_left, etc. -->
+
+  </ros2_control>
+</robot>

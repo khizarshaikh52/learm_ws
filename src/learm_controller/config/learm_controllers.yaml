@@ -1,0 +1,22 @@
+# learm_controllers.yaml
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    # This publishes joint_states
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    # Trajectory controller for your revolute joints
+    position_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+      joints:
+        - shoulder_pan
+        - shoulder_lift
+        - elbow1
+        - elbow2
+        - wrist_flex
+        - wrist_roll
+        - grip_left
+        - grip_right
+        # (add any others you need)

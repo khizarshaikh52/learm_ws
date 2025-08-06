@@ -1,0 +1,10 @@
+# Default initial positions for arduinobot's ros2_control fake system
+
+initial_positions:
+  elbow1: 0
+  elbow2: 0
+  grip_left: 0
+  shoulder_lift: 0
+  shoulder_pan: 0
+  wrist_flex: 0
+  wrist_roll: 0

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>learm_msgs</name>
+  <version>0.0.0</version>
+  <description>
+    ROS 2 interface definitions for the LeArm project, including an AddTwoInts service.
+  </description>
+
+  <maintainer email="shaikhkhizar@outlook.com">skhizar</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- ament build system -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>std_msgs</buildtool_depend>
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
+
+  <!-- if you begin using builtin_interfaces (Time, Duration), add this: -->
+  <!-- <depend>builtin_interfaces</depend> -->
+
+  <!-- runtime for generated interfaces -->
+  <exec_depend>rosidl_default_runtime</exec_depend>
+
+  <!-- marks this as an interface package -->
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <!-- optional linting -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

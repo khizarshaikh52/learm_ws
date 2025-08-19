@@ -1,0 +1,7 @@
+shoulder_pan
+shoulder_lift
+elbow1
+elbow2
+wrist_flex
+wrist_roll
+grip_left

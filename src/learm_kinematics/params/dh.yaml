@@ -1,0 +1,19 @@
+learm_kinematics:
+  ros__parameters:
+    joint_names: [shoulder_pan, shoulder_lift, elbow1, elbow2, wrist_flex, wrist_roll, grip_left]
+
+    dh:
+      a:     [0.0100, 0.00, 0.0531, 0.000, 0.000, 0.000]
+      alpha: [1.5708, 0.0,   1.5708,  -1.5708, 1.5708, 0.0]
+      d:     [0.0590,  0.0280,   0.0,   0.0186,     0.0800,     0.06]
+      theta_off: [0.0, 0.0, 3.1416, 3.1416, 0.0, 0.0]
+
+    ik:
+      max_iters: 400
+      step: 0.08
+      tol_pos: 0.005
+      tol_rot: 0.05
+
+    limits_deg:
+      min: [-120, -120, -120, -120, -120, -120, -30]
+      max: [ 120,  120,  120,  120,  120,  120,  30]

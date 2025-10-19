@@ -1,0 +1,18 @@
+homography:
+  # 3x3 row-major: maps pixel [u,v,1]^T -> base-plane XY in millimetres
+  H: [
+    0.2,  0.0,   0.0,
+    0.0, -0.2, 150.0,
+    0.0,  0.0,   1.0
+  ]
+Z_work_mm: 5.0
+tool_offset_mm: [0.0, 0.0, 30.0]
+path:
+  step_mm: 2.0
+  corner_tol_mm: 0.8
+motion:
+  speed_deg_s: 20.0
+  dwell_start_s: 0.3
+  dwell_end_s: 0.3
+joints:
+  names: ["shoulder_pan","shoulder_lift","elbow1","elbow2","wrist_flex","wrist_roll","grip_left"]

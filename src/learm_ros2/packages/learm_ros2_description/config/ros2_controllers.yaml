@@ -37,3 +37,57 @@ arm_controller:
       elbow2:         { trajectory: 0.2, goal: 0.2 }
       wrist_flex:     { trajectory: 0.2, goal: 0.2 }
       wrist_roll:     { trajectory: 0.2, goal: 0.2 }
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    arm_controller:
+      type: position_controllers/JointGroupPositionController
+
+    gripper_controller:
+      type: position_controllers/GripperActionController
+
+arm_controller:
+  ros__parameters:
+    joints:
+      - shoulder_pan
+      - shoulder_lift
+      - elbow1
+      - elbow2
+      - wrist_flex
+      - wrist_roll
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+gripper_controller:
+  ros__parameters:
+    joint: grip_left
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+    # These are just example limits; adjust after you confirm your real joint limits
+    min_position: -1.57
+    max_position: 0.0
+
+    # Optional tuning
+    goal_tolerance: 0.02
+    max_effort: 1000.0
+    stall_velocity_threshold: 0.001
+    stall_timeout: 1.0
+    gripper_group_controller:
+  type: position_controllers/JointGroupPositionController
+
+gripper_group_controller:
+  ros__parameters:
+    joints: [grip_left, grip_right]
+    command_interfaces: [position]
+    state_interfaces: [position, velocity]
